@@ -8,7 +8,7 @@
 
     <environment names="Development">
         @*<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />*@
-        <link rel="stylesheet" href="~/css/site.css" />
+        <link rel="stylesheet" href="~/css/site.css"  asp-append-version="true"/>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular.js"></script>
     </environment>
     <environment names="Staging,Production">
@@ -42,6 +42,8 @@
     </nav>*@
     <div class="container body-content">
         @RenderBody()
+        @Html.Partial("Modal")
+
         <hr />
         <footer>
             <p>&copy; 2017 - TWO</p>
@@ -74,8 +76,5 @@
     </environment>
 
     @RenderSection("Scripts", required: false)
-</body>
-<body>
-    @Html.Partial("Modal")
-</body>
+</body>    
 </html>

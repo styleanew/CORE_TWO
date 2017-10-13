@@ -98,6 +98,10 @@ module.directive('lvlDropTarget', ['$rootScope', 'uuid', function ($rootScope, u
                 var dest = document.getElementById(id);
                 var src = document.getElementById(data);
 
+                $rootScope.clickable = true;
+                dest.dataset.contentClickable = true;
+                //$rootScope.IsClickEnable = false;
+
                 scope.onDrop({ dragEl: src, dropEl: dest });
             });
 
