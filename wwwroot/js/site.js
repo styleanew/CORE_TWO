@@ -1,8 +1,5 @@
-﻿// Write your Javascript code.
-
-//angular.element(document).ready(function () {
-   
-
+﻿
+//angular.element(document).ready(function () { 
 // var app = angular.bootstrap(document.getElementById("m2"), ['modelmodal']);
 var app = angular.module('lvl-withme', ['markerModal']);
 
@@ -36,7 +33,3 @@ app.directive('modalDialog', function () {
             $scope.modalShown = !$scope.modalShown;
         };
     }]);
-
-
-
-//});   

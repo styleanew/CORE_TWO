@@ -44,7 +44,7 @@
 
 
 
-var app2 = angular.module('markerModal', []);
+var app2 = angular.module('markerModal', ['schemodal']);
 
 app2.directive('modalDialog2', function () {
     return {
