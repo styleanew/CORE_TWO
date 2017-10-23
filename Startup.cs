@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using TWO.Models;
 
 namespace TWO
 {
@@ -31,6 +32,9 @@ namespace TWO
             // Add framework services.
             services.AddMvc();
             services.AddDataProtection();
+
+            var connection = @"Server=FCRD-ZOLTAN-PER\SQLSERVEREXPRESS;Database=roadmap;Trusted_Connection=True;";
+            services.AddDbContext<RoadmapContext>(options => options.UseSqlServer(connection));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
