@@ -1,13 +1,10 @@
-﻿var schem1 = angular.module('schemodal', ['ui.grid']);
+﻿var schem1 = angular.module('schemodal', ['ngTouch', 'ui.grid']);
 
 
-schem1.controller('MyCtrl', ['$scope', function ($scope) {
-    $scope.myData = [{ name: "Moroni", due: 50 },
-    { name: "Tiancum", due: 43 },
-    { name: "Jacob", due: 27 },
-    { name: "Nephi", due: 29 },
-    { name: "Enos", due: 34 }];
-    $scope.gridOptions = { data: 'myData' };
+schem1.controller('gridCtrl', ['$scope', function ($scope) {
+    $scope.myData = [{ 'name': "Moroni", "due": "50" },
+    { "name": "Tiancum", "due": "43" }
+    ];
 }]);
 
 

@@ -10,7 +10,8 @@
         @*<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />*@
         <link rel="stylesheet" href="~/css/site.css"  asp-append-version="true"/>
         <link data-require="ui-grid@3.0.0RC20" data-semver="3.0.0RC20" rel="stylesheet" href="http://cdn.rawgit.com/angular-ui/ui-grid.info/gh-pages/release/3.0.0-rc.20/ui-grid.css" />
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular.js"></script>
+        @*<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular.js"></script>*@
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.js"></script>
     </environment>
     <environment names="Staging,Production">
         <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
@@ -45,6 +46,8 @@
         @RenderBody()
         @Html.Partial("Modal")
 
+
+
         <hr />
         <footer>
             <p>&copy; 2017 - TWO</p>
@@ -53,6 +56,7 @@
 
     <environment names="Development">
         <script data-require="ui-grid@3.0.0RC20" data-semver="3.0.0RC20" src="http://cdn.rawgit.com/angular-ui/ui-grid.info/gh-pages/release/3.0.0-rc.20/ui-grid.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-touch.js"></script>
 
         <script src="~/lib/jquery/dist/jquery.js"></script>
         @*<script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>*@        

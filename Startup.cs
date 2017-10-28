@@ -32,6 +32,7 @@ namespace TWO
             // Add framework services.
             services.AddMvc();
             services.AddDataProtection();
+            services.AddMemoryCache();
 
             var connection = @"Server=FCRD-ZOLTAN-PER\SQLSERVEREXPRESS;Database=roadmap;Trusted_Connection=True;";
             services.AddDbContext<RoadmapContext>(options => options.UseSqlServer(connection));
